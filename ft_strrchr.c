@@ -1,7 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:06:35 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 17:04:30 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_leng(const char *s)
 {
@@ -13,15 +22,14 @@ int	ft_leng(const char *s)
 	return (i);
 }
 
-
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    size_t    len;
+	size_t	len;
 
-    len = ft_leng(s);
-    while (len > 0 && s[len] != c)
-        len--;
-    if (s[len] != c)
-        return (NULL);
-    return ((char *)&s[len]);
+	len = ft_leng(s);
+	while (len > 0 && s[len] != (char)c)
+		len--;
+	if (s[len] != (char)c)
+		return (NULL);
+	return ((char *)&s[len]);
 }

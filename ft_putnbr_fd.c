@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 13:27:08 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 13:27:10 by mclerico         ###   ########.fr       */
+/*   Created: 2021/09/13 16:08:24 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 16:20:39 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-char	*ft_strdup(const char *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	len;
-	size_t	i;
-	char	*dup;
+	char	*s;
 
-	len = ft_strlen(s);
-	i = 0;
-	dup = (char *)malloc(len + 1);
-	if (!dup)
-		return (NULL);
-	while (s[i] != 0)
+	s = ft_itoa(n);
+	if (!s)
+		return ;
+	while (*s)
 	{
-		dup[i] = s[i];
-		i++;
+		write(fd, s, 1);
+		s++;
 	}
-	dup[i] = 0;
-	return (dup);
 }

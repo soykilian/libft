@@ -1,9 +1,18 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:23:52 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 13:30:01 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_bzero (void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 

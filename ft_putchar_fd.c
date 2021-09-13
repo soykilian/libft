@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 13:27:08 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 13:27:10 by mclerico         ###   ########.fr       */
+/*   Created: 2021/09/13 15:49:55 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 15:52:37 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+#include <unistd.h>
 
-char	*ft_strdup(const char *s)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	len;
-	size_t	i;
-	char	*dup;
-
-	len = ft_strlen(s);
-	i = 0;
-	dup = (char *)malloc(len + 1);
-	if (!dup)
-		return (NULL);
-	while (s[i] != 0)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = 0;
-	return (dup);
+	write(fd, &c, 1);
 }

@@ -1,10 +1,18 @@
-#include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:26:28 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 13:47:53 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*srcc;
 	unsigned char	*destc;

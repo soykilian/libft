@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:05:36 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 17:49:45 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int		ft_nwords(char c, char const *s)
+int	ft_nwords(char c, char const *s)
 {
 	int		fsep;
 	int		cont;
@@ -11,12 +23,12 @@ int		ft_nwords(char c, char const *s)
 	cont = 1;
 	while (s[i] != 0)
 	{	
-		if(fsep == 0 && s[i] == c)
+		if (fsep == 0 && s[i] == c)
 		{
 			fsep = 1;
 			cont++;
 		}
-		else if (s[i] != c )
+		else if (s[i] != c)
 			fsep = 0;
 		i++;
 	}
@@ -33,14 +45,14 @@ char	*ft_copy(int *i, char const *s, char c, char *p)
 	while (s[*i] != c)
 	{
 		l++;
-		*i+=1;
+		*i += 1;
 	}
 	p = malloc(l + 1);
 	if (!p)
-		return(p);
+		return (p);
 	*i -= l;
 	l = 0;
-	while(s[*i] && s[*i] != c)
+	while (s[*i] && s[*i] != c)
 	{
 		p[l++] = s[*i];
 		*i += 1;
@@ -58,9 +70,8 @@ void	ft_words(char const *s, char c, char **p, int n)
 	i = 0;
 	k = 0;
 	fletter = -1;
-
-	if (!*s)
-		return;
+	if (!s)
+		return ;
 	fletter = 1;
 	while (s[i] && n > k)
 	{
@@ -70,9 +81,8 @@ void	ft_words(char const *s, char c, char **p, int n)
 			p++;
 			k++;
 			if (k == n)
-				break;
+				break ;
 		}
-		
 		i++;
 	}
 }
@@ -86,11 +96,11 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s == c && s)
 		s++;
-	nwords = ft_nwords(c,s);
+	nwords = ft_nwords(c, s);
 	p = malloc((nwords + 1) * sizeof(char *));
 	if (!p || nwords == 0)
 		return (p);
-	ft_words(s,c,p,nwords);
+	ft_words(s, c, p, nwords);
 	p[nwords] = 0;
-	return(p);
+	return (p);
 }

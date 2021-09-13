@@ -1,20 +1,28 @@
-#include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:25:49 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 13:25:51 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memccpy(void *restrict dest, const void *restrict src, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned char 	*destc;
-	unsigned char 	*srcc;
+	unsigned char	*destc;
+	unsigned char	*srcc;
 	int				i;
 	unsigned char	cc;
 
 	i = 0;
-	destc = (unsigned char*)dest;
-	srcc = (unsigned char*)src;
+	destc = (unsigned char *)dest;
+	srcc = (unsigned char *)src;
 	cc = (unsigned char) c;
-
 	if (!dest && !src)
 		return (dest);
 	while (i < (int)n)
@@ -29,5 +37,3 @@ void *ft_memccpy(void *restrict dest, const void *restrict src, int c, size_t n)
 	}
 	return (NULL);
 }
-
-

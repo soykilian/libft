@@ -1,6 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:22:32 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 16:42:46 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isspace(char c)
 {
@@ -9,7 +19,7 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		cont;

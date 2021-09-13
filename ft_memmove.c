@@ -1,9 +1,18 @@
-#include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:26:40 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 13:32:08 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*destc;
 	unsigned char		*srcc;

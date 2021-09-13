@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/13 13:19:10 by mclerico          #+#    #+#             */
+/*   Updated: 2021/09/13 13:19:26 by mclerico         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -26,5 +38,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	join[i] = 0;
-	return(join);
+	return (join);
 }
