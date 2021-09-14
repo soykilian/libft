@@ -6,7 +6,7 @@
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:27:51 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 17:40:27 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/14 13:41:02 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_possible_needle(const char *p, const char *needle, size_t size, int i)
 
 char	*ft_strnstr(const char	*str, const char *to_find, size_t len)
 {
-	size_t		i;
+	size_t	i;
 	int		size;
 	char	*s;
 
@@ -41,7 +41,7 @@ char	*ft_strnstr(const char	*str, const char *to_find, size_t len)
 	i = 0;
 	s = (char *) str;
 	size = (int) ft_strlen(to_find);
-	while (str[i] != 0 && i <= len)
+	while (str[i] && i < len)
 	{
 		if (str[i] == to_find[0])
 		{

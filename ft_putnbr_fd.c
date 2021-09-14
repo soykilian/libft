@@ -6,7 +6,7 @@
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 16:08:24 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/14 09:27:37 by mariavict        ###   ########.fr       */
+/*   Updated: 2021/09/14 13:43:06 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-2147483648", 11);
 	else if (n < 0)
 	{
-		write(fd, "-",1);
+		write(fd, "-", 1);
 		n *= -1;
 		ft_printnum(n, fd);
 	}

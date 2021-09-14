@@ -1,12 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
+/* ************************************************************************** */ /*                                                                            */ /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:05:36 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 17:49:45 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/14 15:03:04 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +35,23 @@ int	ft_nwords(char c, char const *s)
 	return (cont);
 }
 
-char	*ft_copy(int *i, char const *s, char c, char *p)
+int		f_len(char const *s, char c, int i)
+{
+	int	len;
+
+	len = 1;
+	while (s[i] && s[i] != c)
+	{
+		len++;
+		i++;
+	}
+	return (len);
+}
+
+void	ft_copy(int *i, char const *s, char c, char *p)
 {
 	int		l;
 
-	l = 0;
-	while (s[*i] != c)
-	{
-		l++;
-		*i += 1;
-	}
-	p = malloc(l + 1);
-	if (!p)
-		return (p);
-	*i -= l;
 	l = 0;
 	while (s[*i] && s[*i] != c)
 	{
@@ -58,49 +59,41 @@ char	*ft_copy(int *i, char const *s, char c, char *p)
 		*i += 1;
 	}
 	p[l] = 0;
-	return (p);
-}
-
-void	ft_words(char const *s, char c, char **p, int n)
-{
-	int		fletter;
-	int		i;
-	int		k;
-
-	i = 0;
-	k = 0;
-	fletter = -1;
-	if (!s)
-		return ;
-	fletter = 1;
-	while (s[i] && n > k)
-	{
-		while (s[i] != c)
-		{
-			*p = ft_copy(&i, s, c, *p);
-			p++;
-			k++;
-			if (k == n)
-				break ;
-		}
-		i++;
-	}
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		nwords;
+	int		k;
+	int		i;
 	char	**p;
 
+	k = 0;
+	i = 0;
 	if (!s)
 		return (NULL);
-	while (*s == c && s)
-		s++;
 	nwords = ft_nwords(c, s);
 	p = malloc((nwords + 1) * sizeof(char *));
 	if (!p || nwords == 0)
 		return (p);
-	ft_words(s, c, p, nwords);
+	while (s[i] && nwords > k)
+	{
+		while (s[i] == c)
+			i++;
+		while (s[i] && s[i] != c)
+		{
+			p[k] = (char *) malloc (f_len(s, c, i));
+			if (!p[k])
+			{
+				free(p);
+				return (NULL);
+			}
+			ft_copy(&i, s, c, p[k]);
+			k++;
+			if (k == nwords)
+				break ;
+		}
+	}
 	p[nwords] = 0;
 	return (p);
 }
