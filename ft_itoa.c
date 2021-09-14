@@ -6,7 +6,7 @@
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:30:49 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 13:30:51 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:41:50 by mariavict        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,13 @@ char	*ft_itoa(int n)
 	if (!itoa)
 		return (NULL);
 	if (n < 0)
-	{
 		itoa[0] = '-';
-		n *= -1;
-	}
 	else if (n == 0)
 		itoa[0] = '0';
 	itoa[pos--] = 0;
 	while (n != 0)
 	{
+		printf("%d \n", n);
 		if ((n % 10) > 0)
 			itoa[pos--] = (n % 10) + 48;
 		else
