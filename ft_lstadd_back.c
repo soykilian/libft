@@ -6,7 +6,7 @@
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 17:42:30 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/15 14:46:36 by mariavict        ###   ########.fr       */
+/*   Updated: 2021/09/15 15:59:09 by mariavict        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			aux = ft_last(*lst);
 			aux->next = new;
 		}
-		else 
+		else
 			*lst = new;
 	}
 }

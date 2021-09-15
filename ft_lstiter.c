@@ -6,7 +6,7 @@
 /*   By: mariavictoria <marvin@42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 12:23:15 by mariavict         #+#    #+#             */
-/*   Updated: 2021/09/15 12:28:58 by mariavict        ###   ########.fr       */
+/*   Updated: 2021/09/15 16:01:30 by mariavict        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		(*f)(lst->content);
 		aux = lst->next;
-		lst = aux;	
+		lst = aux;
 	}
 }

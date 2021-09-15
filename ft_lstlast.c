@@ -6,7 +6,7 @@
 /*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 17:54:02 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/14 17:57:41 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 16:00:42 by mariavict        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst)
-		while (lst->next) 
+		while (lst->next)
 			lst = lst->next;
 	return (lst);
 }
