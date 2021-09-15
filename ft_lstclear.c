@@ -6,7 +6,7 @@
 /*   By: mariavictoria <marvin@42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:59:33 by mariavict         #+#    #+#             */
-/*   Updated: 2021/09/15 12:22:47 by mariavict        ###   ########.fr       */
+/*   Updated: 2021/09/15 15:52:57 by mariavict        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*aux;
-	if (lst)
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		while (*lst)
-		{
-			(*del)((*lst)->content);
-			//ft_lstdelone(*lst,del);
-			aux = (*lst)->next;
-			*lst = aux;
-		}
+		(*del)((*lst)->content);
+		aux = (*lst)->next;
+		free(*lst);
+		*lst = aux;
 	}
 }

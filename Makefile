@@ -5,7 +5,7 @@ SRCS	= ft_strlen.c ft_strlcat.c ft_strlcpy.c ft_bzero.c ft_isalpha.c ft_isdigit.
 SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
 SRCH	= libft.h
 OBJS	= ${SRCS:.c=.o}
-OBJSBONUS	= ${SRCSBONUS:.c=.o}
+OBJSBONUS	= ${SRCBONUS:.c=.o}
 RM		= rm -f
 
 
