@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mclerico <mclerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:06:35 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 17:04:30 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 21:14:08 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_leng(const char *s)
+static int	ft_leng(const char *s)
 {
 	int	i;
 

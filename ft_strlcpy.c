@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mclerico <mclerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:27:27 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 13:33:23 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:04:40 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	ft_copystr(char *dest, char *src, unsigned int size)
+static void	ft_copystr(char *dest, char *src, unsigned int size)
 {
 	int		i;
 	char	*dst;

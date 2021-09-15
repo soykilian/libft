@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mclerico <mclerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:27:51 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/14 13:41:02 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 21:14:00 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_possible_needle(const char *p, const char *needle, size_t size, int i)
+static int	check_possible_needle(const char *p, const char *n, size_t s, int i)
 {
 	int		f_size;
 	int		j;
@@ -21,7 +21,7 @@ int	check_possible_needle(const char *p, const char *needle, size_t size, int i)
 	j = 0;
 	index = i;
 	f_size = 0;
-	while (p[i] == needle[j] && needle[j] && p[i] && j + index < size)
+	while (p[i] == n[j] && n[j] && p[i] && j + index < s)
 	{
 		f_size++;
 		j++;

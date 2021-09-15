@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mclerico <mclerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 21:01:33 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/15 21:01:39 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 21:17:52 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nwords(char const *s, char c)
+static int	ft_nwords(char const *s, char c)
 {
 	int	fletter;
 	int	i;
@@ -37,7 +37,7 @@ int	ft_nwords(char const *s, char c)
 	return (count);
 }
 
-char	*ft_copy(char const *s, char c, int *i)
+static char	*ft_copy(char const *s, char c, int *i)
 {
 	int		l;
 	int		cont;

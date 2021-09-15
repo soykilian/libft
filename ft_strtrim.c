@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mclerico <mclerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:10:31 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/13 13:13:09 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:04:57 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_needle(const char *set, char c)
+static int	check_needle(const char *set, char c)
 {
 	int	j;
 
@@ -26,7 +26,7 @@ int	check_needle(const char *set, char c)
 	return (0);
 }
 
-char	*ft_copytrim(char const *s1, char *res, int size, int index)
+static char	*ft_copytrim(char const *s1, char *res, int size, int index)
 {
 	int	i;
 
@@ -49,6 +49,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = 0;
+	if (!s1 || !set)
+		return (NULL);
 	len = (int)ft_strlen(s1);
 	while (s1[i] && check_needle(set, s1[i]))
 		i++;

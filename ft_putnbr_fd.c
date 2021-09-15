@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclerico <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mclerico <mclerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 16:08:24 by mclerico          #+#    #+#             */
-/*   Updated: 2021/09/14 13:43:06 by mclerico         ###   ########.fr       */
+/*   Updated: 2021/09/15 21:12:18 by mclerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_printnum(int n, int fd)
+static void	ft_printnum(int n, int fd)
 {
 	char	c;
 
